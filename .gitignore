@@ -7,3 +7,4 @@ traceback.txt
 *.desktop.ini
 game/saves/persistent
 game/tl/None/common.rpymc
+game/saves/persistent
