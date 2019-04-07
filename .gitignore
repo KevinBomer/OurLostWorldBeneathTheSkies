@@ -7,3 +7,7 @@ traceback.txt
 *.desktop.ini
 game/tl/None/common.rpymc
 game/saves/persistent
+game/cache/bytecode.rpyb
+game/cache/pyanalysis.rpyb
+game/cache/screens.rpyb
+game/saves/auto-10-LT1.save
