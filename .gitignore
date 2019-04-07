@@ -3,4 +3,5 @@ errors.txt
 log.txt
 traceback.txt
 *.rpyc
+*.rpyb
 *.desktop.ini
