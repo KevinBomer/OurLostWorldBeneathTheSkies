@@ -444,7 +444,7 @@ label chapter1:
     hide L
     show M annoyed n with dissolve
     voice "M(20)"
-    M "I'm going to tell him if he ever leaves me behind with the Golden One again, he's going come back to Tallara locked in the rookery living off seeds."
+    M "I'm going to tell him if he ever leaves me behind with the Golden One again, he's going to come back to Tallara locked in the rookery living off seeds."
     voice "T(20)"
     T "Well, I’m going to tell him-"
     show M angry n with dissolve
@@ -637,7 +637,7 @@ label chapter1:
     
     
     #scene 1.3
-    scene flankerberth night
+    scene flankerberth with dissolve
     play music "music/4_OLW_SnowPiles.ogg" fadein 2.0 fadeout 2.0
     "When I wake from my nap, Laverna is quietly tinkering with some clockwork {i}thing{/i} across the room."
     play sound "sfx/wardobe_sliding_door_open.ogg"
@@ -734,7 +734,7 @@ label chapter1:
     T "Um, don't you have anything with protein?"
     "The canteen server nods, reaches behind the counter.."
     play sound "sfx/syrup_hands_slop.ogg"
-    "...and scoops a pile of sardines on top of the bread"
+    "...and scoops a pile of sardines on top of the bread."
     voice "T(50)"
     T "I'm supposed to eat this?"
     Canteen Server "No birds. Just fish. Good protein."
@@ -789,7 +789,7 @@ label chapter1:
     show D speaking with dissolve
     voice "D(13)"
     D "She is forming a new reconnaissance section and has chosen the three of you to be part of it."
-    "I nudge Magnus "
+    "I nudge Magnus."
     #####Im going to have to come back here and check on sprite direction. It's going to take some experinmenting
     hide D with dissolve
     voice "T(55)"
@@ -938,7 +938,7 @@ label chapter1:
     M "Thank you, Ma'am."
     
     
-    "The Striker walks down the line to Laverna"
+    "The Striker walks down the line to Laverna."
     show I cool with dissolve
     voice "I(18)"
     I "And you're Laverna? The field engineer."
@@ -1121,7 +1121,7 @@ label chapter1:
     stop music fadeout 2.0
     
     #Scene 1.6
-    scene deploymentdeck
+    scene deploymentdeck with dissolve
     "The next morning, we stand on the deployment deck."
     "My stomach is unsettled. I did some gliding back in Spire, but it was nothing like this."
     "On the other hand, Laverna and Magnus aren't even sweating."
@@ -1258,7 +1258,7 @@ label chapter1:
     $renpy.music.set_volume(0.5, delay=5, channel='env')
     I "Abort glide, follow emergency procedure two. Laverna, get the interlink back."
     voice "L(67)"
-    L "I'm trying, i'm trying!"
+    L "I'm trying, I'm trying!"
     "Their voices become distorted."
     
     
@@ -1303,7 +1303,7 @@ label chapter1:
     L "How does it taste?"
     show I speaking c with dissolve
     voice "I(65)"
-    I "Theres seeds in them. Wow, these are good."
+    I "There's seeds in them. Wow, these are good."
     "She offers some to Laverna and I. It's frozen, but sweet on the inside."
     show L cheerful c with dissolve
     voice "L(71)"
@@ -1367,7 +1367,7 @@ label chapter1:
     
 
     #scene 1.8 Igdril
-    scene igdril
+    scene igdril with dissolve
     "We come to a stone wall and all crouch down behind it."
     "Staying down, I find an opening in the wall, and look through."
 
@@ -1401,7 +1401,7 @@ label chapter1:
     "We all jump the stone wall and walk to the bell tower."
     "Magnus leads the way inside."
     play sound "sfx/door_creak.ogg"
-    scene igdrilbuilding
+    scene igdrilbuilding with dissolve
     $ renpy.pause (1.0)
     show L surprised c at leftoffset with dissolve
     voice "L(77)"
@@ -1539,7 +1539,7 @@ label chapter1:
     #Chapter 2
     #Scene 2.1
 
-    scene deploymentdeck
+    scene deploymentdeck with dissolve
     "Our flier docks in the Erebus deployment deck. The ramp opens with a bump and Laverna stirs from her nap."
     play env "sfx/industrial_alarm.ogg" fadein 2.0 fadeout 2.0
     "Outside, an alarm is sounding."
@@ -1555,7 +1555,7 @@ label chapter1:
     "She continues out the door, dropping her gear on the hanger floor as she goes. "
     play sound "sfx/heavy_bag_drop_dirt2.ogg"
     "I toss my parachute pack on the shelf and we run after her."
-    scene hallway
+    scene hallway with dissolve
     $renpy.music.set_volume(0.1, delay=2, channel='env')
     "Iris is ahead. We follow a few paces behind her."
     
@@ -1573,7 +1573,7 @@ label chapter1:
     T "Why?"
     voice "L(84)"
     L "Woo, I don't know!"
-    scene commandcenter
+    scene commandcenter with dissolve
     stop env fadeout 5.0
     "We arrive at the command center and follow Iris inside."
     "She marches up to D'Aza's desk..."
@@ -1589,7 +1589,8 @@ label chapter1:
     D "What is this?"
     voice "I(80)"
     I "Your agent Darkrose left this in Igdril for us to find. Do you recognise it?"
-    "The D'Aza examines the medallion."
+    "
+    Commander D'Aza examines the medallion."
     show D thinking with dissolve
     voice "D(16)"
     D "Ellis..."
@@ -1605,10 +1606,12 @@ label chapter1:
     show I surprised c with dissolve
     voice "I(83)"
     I "What? Sir we can continue the mission, all I need is the right equipment-"
+    voice "communications(1)"
     communications "Commander! The garrison at Insigli reports the Shuvur have breached the outer defenses."
     show D thinking with dissolve
     voice "D(18)"
     D "Has it been confirmed?"
+    voice "communications(2)"
     communications "Yes sir, Intelligence confirms. They are marching on towards the city."
     hide D with dissolve
     "D'Aza stands up from his desk and leans over the railing."
@@ -1960,7 +1963,7 @@ label chapter1:
     hide I with dissolve
     show L cheerful n with dissolve
     voice "L(102)"
-    L "Not that! What's your favorite meal. Ya know, something you're family used to eat together."
+    L "Not that! What's your favorite meal> Ya know, something your family used to eat together."
     hide L with dissolve
     show I confident n at leftoffset with dissolve
     voice "I(105)"
@@ -2138,7 +2141,7 @@ label chapter1:
 
     #Scene 2.6, jump into Insigli
 
-    scene deploymentdeck
+    scene deploymentdeck with dissolve
     "The next morning, we're gearing up again."
     "I strap on my flight pack and wait on the deployment deck with the rest of my squad."
     play music "music/1_OLW_SmellOfVictory.ogg" fadein 2.0 fadeout 2.0
