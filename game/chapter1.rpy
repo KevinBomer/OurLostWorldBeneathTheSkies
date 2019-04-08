@@ -1606,12 +1606,12 @@ label chapter1:
     show I surprised c with dissolve
     voice "I(83)"
     I "What? Sir we can continue the mission, all I need is the right equipment-"
-    voice "communications(1)"
+    voice "communications(2)"
     communications "Commander! The garrison at Insigli reports the Shuvur have breached the outer defenses."
     show D thinking with dissolve
     voice "D(18)"
     D "Has it been confirmed?"
-    voice "communications(2)"
+    voice "communications(1)"
     communications "Yes sir, Intelligence confirms. They are marching on towards the city."
     hide D with dissolve
     "D'Aza stands up from his desk and leans over the railing."
