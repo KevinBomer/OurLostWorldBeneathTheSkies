@@ -190,6 +190,8 @@ define config.say_attribute_transition = dissolve
 
 
 label splashscreen:
+    $ UPDATE_URL = "http://sarchalen.com/ourlostworldbeneaththeskies/update/updates.json"
+    $ new_version = updater.UpdateVersion(url=UPDATE_URL, simulate=None)
     python:
         if not persistent.set_volumes:
             persistent.set_volumes = True
@@ -208,8 +210,6 @@ label splashscreen:
     jump update
     
 label update:
-    $ UPDATE_URL = "http://sarchalen.com/ourlostworldbeneaththeskies/update/updates.json"
-    $ new_version = updater.UpdateVersion(url=UPDATE_URL, simulate=None)
     if new_version != None:
         $ updater.update(url=UPDATE_URL, base=None, force=False, public_key=None, simulate=None, add=[], restart=True)
     else:
