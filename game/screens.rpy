@@ -307,7 +307,7 @@ screen navigation():
             textbutton _("Save") action ShowMenu("save")
 
             textbutton _("Load") action ShowMenu("load")
-            
+
 
 
         if _in_replay:
@@ -316,7 +316,7 @@ screen navigation():
 
         elif not main_menu:
             textbutton _("Main Menu") action MainMenu()
-        
+
 
 
         if renpy.variant("pc"):
@@ -361,7 +361,7 @@ screen navigation2():
         textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Settings") action ShowMenu("preferences")
-        
+
         textbutton _("About") action ShowMenu("about")
 
         if _in_replay:
@@ -609,7 +609,7 @@ screen about():
             text _("Version [config.version!t]\n")
 
             # gui.about is usually set in options.rpy.
-            
+
             if gui.about:
                 text "[gui.about!t]\n"
 
@@ -798,10 +798,10 @@ init -2 python:
     style.pref_slider.ymaximum = 5
 
     style.pref_slider.thumb = "gui/slider/03.png"
-    
+
     style.pref_slider.thumb_offset = 0
     style.pref_slider.thumb_shadow = None
-    
+
 screen preferences():
     tag menu
     add "gui/prefs_menu.png"
@@ -812,9 +812,9 @@ screen preferences():
     else:
         $ cols = 4
 
-    
-    
-    
+
+
+
         vbox:
             xalign .75
             yalign .195
@@ -834,7 +834,7 @@ screen preferences():
                         textbutton _("") action Preference("display", "fullscreen"):
                             xpos -50
                             ypos 112
-                        
+
 
                 vbox:
                     style_prefix "radio"
@@ -852,7 +852,7 @@ screen preferences():
                 vbox:
                     style_prefix "radio"
                     #label _("Skip"):
-                        xalign .40
+                    xalign .40
                     textbutton _("") action Preference("skip", "toggle"):
                         xpos 0
                         ypos 122
@@ -918,8 +918,8 @@ screen preferences():
                                 ypos 250
                             if config.sample_voice:
                                 textbutton _("Test") action Play("voice", config.sample_voice)
-                                
-                    
+
+
 
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
@@ -929,7 +929,7 @@ screen preferences():
                             style "mute_all_button"
                             xalign .5
                             ypos 300
-                            
+
                 vbox:
                     null height 230
                    # label _("D'aza")
@@ -972,7 +972,7 @@ screen preferences():
                          xmaximum 200
                          xpos 130
                          ypos 185
-               
+
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text
@@ -1633,4 +1633,3 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
-
