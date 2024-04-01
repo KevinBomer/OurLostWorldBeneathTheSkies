@@ -34,13 +34,11 @@ label start:
     hide I with dissolve
     
     show D thinking with dissolve
-    "D’Aza pauses, only to become more stone faced."
     voice "D(4)"
-    D "If the Wraith's are confident enough to attack Aegris, they must have something planned."
+    D "...If the Wraith's are confident enough to attack Aegris, they must have something planned."
     hide D with dissolve
     
     show I cool n with dissolve
-    "Iris gives a curt nod."
     voice "I(4)"
     I "I see. Is that why you've called me here?"
     hide I with dissolve
@@ -67,8 +65,6 @@ label start:
     voice "D(8)"
     D "I'm afraid we can't spare a full unit, but knowing you, a full flanker section would only slow you down."
     hide D with dissolve
-    
-    "Iris’ expression doesn't shift as she flips through the dossiers."
     show I cool n with dissolve
     voice "I(6)"
     I "You could send anyone for this. I should be back on the front lines."
@@ -1267,17 +1263,16 @@ label chapter1:
     stop music fadeout 2.0
     "Mine opens and I'm yanked up as it slows my fall."
     scene black with Dissolve(2.0)
-    "I black out."
     stop env fadeout 0.8
     # blackout
     play sound "sfx/heavy_bag_drop_dirt2.ogg"
     play env "sfx/soft_wind.ogg" fadein 2.0
     $renpy.music.set_volume(1, delay=5, channel='env')
-    "My mind is a haze. I hear my squad's voices."
     voice "I(62)"
     I "Is everyone okay? Laverna, what happened?"
     voice "L(68)"
     L "I don't know. Something messed up our interlink."
+    "My mind is a haze. I hear my squad's voices."
     "When I open my eyes, I'm face down in the dirt and covered completely by my parachute. " 
     "I sit up and pull the parachute off from me."
     scene vineyard with dissolve

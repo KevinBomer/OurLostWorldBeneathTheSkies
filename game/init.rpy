@@ -132,14 +132,24 @@ init:
     #Background initialization:
     image white = "backgrounds/white.png"
     image trainingroom = "backgrounds/trainingroom.png"
-    image deploymentdeck = "backgrounds/deploymentdeck.png"
-    image flankerberth = "backgrounds/flankerberth.png"
-    image commandcenter = "backgrounds/commandcenter.png"
-    image hallway = "backgrounds/hallway.png"
+    image deploymentdeck:
+        "backgrounds/deploymentdeck.png"
+        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1)*SaturationMatrix(.5)*BrightnessMatrix(0.0)*HueMatrix(20) blur 0
+    image flankerberth:
+        "backgrounds/flankerberth.png"
+        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1)*SaturationMatrix(.5)*BrightnessMatrix(0.0)*HueMatrix(10) blur 0
+    image commandcenter: 
+        "backgrounds/commandcenter.png"
+        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.2)*SaturationMatrix(.8)*BrightnessMatrix(0.1)*HueMatrix(20) blur 0
+    image hallway: 
+        "backgrounds/hallway.png"
+        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1)*SaturationMatrix(.5)*BrightnessMatrix(0.0)*HueMatrix(0) blur 0
     image sky night = "backgrounds/sky night.png"
     image sky = "backgrounds/sky.png"
     image blizzard = "backgrounds/blizzard.png"
-    image bridge = "backgrounds/bridge.png"
+    image bridge:
+        "backgrounds/bridge.png"
+        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1)*SaturationMatrix(.5)*BrightnessMatrix(0.0)*HueMatrix(0) blur 0
     image diving = "backgrounds/diving.png"
     image vineyard = "backgrounds/vineyard.jpg"
     image igdrilbuilding = "backgrounds/igdrilbuilding.jpg"
@@ -147,7 +157,9 @@ init:
     image insigli = "backgrounds/insigli.png"
     image fyrir = "backgrounds/fyrir.png"
     image road = "backgrounds/road.png"
-    image messhall="backgrounds/messhall.png"
+    image messhall:
+        "backgrounds/messhall.png"
+        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1)*SaturationMatrix(.5)*BrightnessMatrix(0.0)*HueMatrix(20) blur 0
     
 
     #Logo Initialization:
@@ -186,12 +198,17 @@ init:
         easein .10 yoffset 0
         easeout .175 yoffset 15
 
-define config.say_attribute_transition = dissolve
+##Side image transform
+transform same_transform(old, new):
+    old
+    new with Dissolve(0.1, alpha=True)
 
+define config.side_image_same_transform = same_transform
+
+
+define config.say_attribute_transition = Dissolve(.2)
 
 label splashscreen:
-    $ UPDATE_URL = "http://sarchalen.com/ourlostworldbeneaththeskies/update/updates.json"
-    $ new_version = updater.UpdateVersion(url=UPDATE_URL, simulate=None)
     python:
         if not persistent.set_volumes:
             persistent.set_volumes = True
@@ -207,10 +224,4 @@ label splashscreen:
         ypos .5
     $ renpy.pause(2, hard=True)
     hide sarchalenlogo with Dissolve(1.0)
-    jump update
-    
-label update:
-    if new_version != None:
-        $ updater.update(url=UPDATE_URL, base=None, force=False, public_key=None, simulate=None, add=[], restart=True)
-    else:
-        return
+    return
