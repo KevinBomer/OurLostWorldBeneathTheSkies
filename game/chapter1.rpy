@@ -1,5 +1,4 @@
 label start:
-    $ camera_reset()
     scene commandcenter with fade
     #Part 0
     #Scene 0.1 Interstitial (Daza and Iris)
