@@ -612,7 +612,7 @@ screen about():
 
             if gui.about:
                 text "[gui.about!t]\n"
-
+            imagebutton idle "images/illusoryworldlogo.png" yalign .5 action OpenURL("https://sarchalen.com/")
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
@@ -854,13 +854,13 @@ screen preferences():
                     #label _("Skip"):
                     xalign .40
                     textbutton _("") action Preference("skip", "toggle"):
-                        xpos 0
+                        xpos 200
                         ypos 122
                     textbutton _("") action Preference("after choices", "toggle"):
-                        xpos 0
+                        xpos 200
                         ypos 112
                     textbutton _("") action InvertSelected(Preference("transitions", "toggle")):
-                        xpos 0
+                        xpos 200
                         ypos 102
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
@@ -926,8 +926,8 @@ screen preferences():
 
                         textbutton _("Mute All"):
                             action Preference("all mute", "toggle")
-                            style "mute_all_button"
-                            xalign .5
+                            #style "mute_all_button"
+                            xalign .4
                             ypos 300
 
                 vbox:
