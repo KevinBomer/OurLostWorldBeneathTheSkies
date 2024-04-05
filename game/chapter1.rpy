@@ -26,7 +26,6 @@ label start:
     show D thinking with dissolve
     voice "D(3)"
     D "That would be suicide, even for the Shuvur."
-    hide D with dissolve
     
     #Removed due to weird line. 
     #show I speaking n with dissolve
