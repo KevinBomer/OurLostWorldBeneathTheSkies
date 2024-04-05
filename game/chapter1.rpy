@@ -28,10 +28,11 @@ label start:
     D "That would be suicide, even for the Shuvur."
     hide D with dissolve
     
-    show I speaking n with dissolve
-    voice "I(3)"
-    I "Are the Shuvur above suicide?"
-    hide I with dissolve
+    #Removed due to weird line. 
+    #show I speaking n with dissolve
+    #voice "I(3)"
+    #I "Are the Shuvur above suicide?"
+    #hide I with dissolve
     
     show D thinking with dissolve
     voice "D(4)"
