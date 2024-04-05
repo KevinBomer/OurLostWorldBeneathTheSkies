@@ -131,6 +131,7 @@ init:
 
     #Background initialization:
     image white = "backgrounds/white.png"
+    image menubg = "backgrounds/menubg.png"
     image trainingroom = "backgrounds/trainingroom.png"
     image deploymentdeck:
         "backgrounds/deploymentdeck.png"
@@ -164,9 +165,7 @@ init:
 
     #Logo Initialization:
     image logo = "logo.png"
-    image sarchalenlogo = "sarchalenlogo.png"
-    image pilogo = "pilogo.png"
-    image wclogo = "wclogo.png"
+    image illusoryworldlogo = "illusoryworldlogo.png"
     
     #CG Initialization:
     image CGmushrooms = "images/cgs/CG mushrooms.png"
@@ -217,11 +216,19 @@ label splashscreen:
             _preferences.volumes['voice'] *= .8
             _preferences.volumes['sfx'] *= .75
     $ renpy.music.play(config.main_menu_music)
-    scene white
-    show sarchalenlogo at center with Dissolve(.5):
-        zoom 0.3
+    scene menubg:
+        xanchor .5 yanchor .5
+        xpos .5 ypos .5
+        zoom 1.2
+        easein 4 zoom 1.3
+    show illusoryworldlogo at center with Dissolve(1):
+        subpixel True
+        zoom .9
         yanchor .5
         ypos .5
+        easeout 4 zoom 1
+        parallel:
+            ease 2 alpha 0
     $ renpy.pause(2, hard=True)
-    hide sarchalenlogo with Dissolve(1.0)
+    hide illusoryworldlogo with Dissolve(1.0)
     return
